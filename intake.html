@@ -1,0 +1,156 @@
+<!DOCTYPE html><html class="light" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Intake Form - Job Alchemist Assisted</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#f2f4f6",
+                        "secondary": "#0051d5",
+                        "tertiary-fixed": "#d3e4fe",
+                        "on-background": "#191c1e",
+                        "on-surface": "#191c1e",
+                        "on-primary-container": "#8293b8",
+                        "inverse-on-surface": "#eff1f3",
+                        "error-container": "#ffdad6",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#4e5e81",
+                        "surface-container": "#eceef0",
+                        "surface-dim": "#d8dadc",
+                        "surface-bright": "#f7f9fb",
+                        "tertiary-container": "#1c2c40",
+                        "surface-container-high": "#e6e8ea",
+                        "on-tertiary-fixed": "#0b1c30",
+                        "secondary-fixed": "#dbe1ff",
+                        "surface-variant": "#e0e3e5",
+                        "primary-fixed-dim": "#b6c6ef",
+                        "on-primary-fixed": "#081b3a",
+                        "on-error": "#ffffff",
+                        "secondary-container": "#316bf3",
+                        "inverse-surface": "#2d3133",
+                        "tertiary-fixed-dim": "#b7c8e1",
+                        "error": "#ba1a1a",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#003ea8",
+                        "on-tertiary-container": "#8393ac",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-secondary-container": "#fefcff",
+                        "on-error-container": "#93000a",
+                        "outline-variant": "#c5c6cf",
+                        "primary-fixed": "#d8e2ff",
+                        "tertiary": "#06172a",
+                        "on-primary-fixed-variant": "#364768",
+                        "primary-container": "#1a2b4b",
+                        "on-surface-variant": "#44474e",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed-dim": "#b4c5ff",
+                        "background": "#f7f9fb",
+                        "primary": "#031635",
+                        "outline": "#75777f",
+                        "on-tertiary-fixed-variant": "#38485d",
+                        "on-tertiary": "#ffffff",
+                        "inverse-primary": "#b6c6ef",
+                        "on-secondary-fixed": "#00174b",
+                        "surface": "#f7f9fb"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap-lg": "96px",
+                        "section-gap-md": "64px",
+                        "container-max": "1280px",
+                        "base": "8px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "display": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "label-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "body-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline": ["Hanken Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface flex flex-col min-h-screen selection:bg-secondary-fixed">
+<header class="bg-surface-container-lowest dark:bg-surface-deep border-b border-border-subtle dark:border-outline-variant sticky top-0 z-50 shadow-sm">
+<div class="flex justify-between items-center max-w-[1200px] mx-auto px-6 py-4 w-full">
+<a class="font-display text-2xl font-bold text-primary dark:text-primary-fixed" href="index.html">Job Alchemist Assisted</a>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-label-md text-sm text-on-surface-variant hover:text-primary transition-colors duration-200" href="index.html#how-it-works">How It Works</a>
+<a class="font-label-md text-sm text-on-surface-variant hover:text-primary transition-colors duration-200" href="index.html#pricing">Pricing</a>
+<a class="font-label-md text-sm text-on-surface-variant hover:text-primary transition-colors duration-200" href="index.html#add-ons">Add-ons</a>
+<a class="font-label-md text-sm text-on-surface-variant hover:text-primary transition-colors duration-200" href="index.html#faqs">FAQs</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden sm:block font-label-md text-sm px-4 py-2 text-on-surface-variant hover:bg-surface-container-low transition-all">Log In</button>
+<a href="index.html#pricing" class="bg-secondary text-on-secondary px-6 py-2.5 rounded-lg font-label-md text-sm font-bold shadow-sm hover:opacity-90 active:scale-95 transition-all inline-block">Get Started</a>
+</div>
+</div>
+</header>
+<main class="flex-grow px-4 py-12 bg-surface">
+<div class="max-w-4xl mx-auto">
+<iframe allow="payment" allowtransparency="true" class="w-full border-none rounded-lg" frameborder="0" height="1400" scrolling="no" src="https://form.jotform.com/261507314916052"></iframe>
+</div>
+</main>
+<footer class="bg-primary dark:bg-surface-deep text-on-primary">
+<div class="max-w-[1200px] mx-auto px-gutter py-section-gap-md grid grid-cols-1 md:grid-cols-2 gap-gutter w-full">
+<div class="space-y-6">
+<h2 class="font-display text-headline-md font-bold text-surface-container-lowest">Job Alchemist Assisted</h2>
+<p class="font-body-md text-on-primary-container max-w-sm opacity-80">Empowering professionals through expert CV refinement and career document optimisation.</p>
+<p class="font-label-sm text-label-sm text-on-primary-container">© 2026 Job Alchemist Assisted. All rights reserved. Professional Career Services.</p>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md text-secondary-fixed-dim uppercase tracking-widest font-bold">Company</h4>
+<ul class="space-y-2">
+<li class=""><a class="font-label-sm text-on-primary-container hover:text-white transition-all underline" href="https://www.jobalchemist.tech/about.html">About Us</a></li>
+<li class=""><a class="font-label-sm text-on-primary-container hover:text-white transition-all underline" href="mailto:hello@jobalchemist.tech">Contact Support</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md text-secondary-fixed-dim uppercase tracking-widest font-bold">Legal</h4>
+<ul class="space-y-2">
+<li class=""><a class="font-label-sm text-on-primary-container hover:text-white transition-all underline" href="Legal/terms.html">Terms of Service</a></li>
+<li class=""><a class="font-label-sm text-on-primary-container hover:text-white transition-all underline" href="Legal/privacy.html">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

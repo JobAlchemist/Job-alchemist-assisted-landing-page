@@ -1,0 +1,650 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en-GB" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Job Alchemist Assisted | CV Review &amp; Rewriting</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error-container": "#93000a",
+                        "success-green": "#10B981",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#f7f9fb",
+                        "background": "#f7f9fb",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed-dim": "#b4c5ff",
+                        "tertiary": "#06172a",
+                        "on-primary-fixed-variant": "#364768",
+                        "primary-fixed": "#d8e2ff",
+                        "surface-container-high": "#e6e8ea",
+                        "outline": "#75777f",
+                        "on-primary": "#ffffff",
+                        "primary-fixed-dim": "#b6c6ef",
+                        "border-subtle": "#E2E8F0",
+                        "surface-tint": "#4e5e81",
+                        "secondary": "#0051d5",
+                        "surface-dim": "#d8dadc",
+                        "on-secondary-fixed": "#00174b",
+                        "inverse-primary": "#b6c6ef",
+                        "error-container": "#ffdad6",
+                        "surface-deep": "#0F172A",
+                        "inverse-on-surface": "#eff1f3",
+                        "surface-container-highest": "#e0e3e5",
+                        "inverse-surface": "#2d3133",
+                        "secondary-container": "#316bf3",
+                        "primary-container": "#1a2b4b",
+                        "outline-variant": "#c5c6cf",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#e0e3e5",
+                        "on-tertiary-container": "#8393ac",
+                        "on-primary-container": "#8293b8",
+                        "tertiary-container": "#1c2c40",
+                        "on-secondary-container": "#fefcff",
+                        "on-primary-fixed": "#081b3a",
+                        "tertiary-fixed-dim": "#b7c8e1",
+                        "accent-blue-light": "#DBEAFE",
+                        "on-tertiary": "#ffffff",
+                        "on-background": "#191c1e",
+                        "surface": "#f7f9fb",
+                        "surface-container-low": "#f2f4f6",
+                        "on-surface-variant": "#44474e",
+                        "on-tertiary-fixed": "#0b1c30",
+                        "tertiary-fixed": "#d3e4fe",
+                        "secondary-fixed": "#dbe1ff",
+                        "on-secondary-fixed-variant": "#003ea8",
+                        "on-surface": "#191c1e",
+                        "surface-container": "#eceef0",
+                        "on-tertiary-fixed-variant": "#38485d",
+                        "surface-container-lowest": "#ffffff",
+                        "primary": "#031635"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap-lg": "96px",
+                        "section-gap-md": "64px",
+                        "container-max": "1280px",
+                        "base": "8px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "display": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "label-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "body-md": ["Inter"],
+                        "label-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .accordion-item.active .accordion-content {
+            max-height: 500px;
+        }
+        .accordion-item.active .icon-rotate {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased">
+<!-- TopNavBar -->
+<header class="bg-surface-container-lowest dark:bg-surface-deep border-b border-border-subtle dark:border-outline-variant sticky top-0 z-50 shadow-sm">
+<div class="flex justify-between items-center max-w-[1200px] mx-auto px-gutter py-4 w-full">
+<a class="font-display text-headline-md font-bold text-primary dark:text-primary-fixed" href="#">Job Alchemist Assisted</a>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#how-it-works">How It Works</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#pricing">Pricing</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#add-ons">Add-ons</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#faqs">FAQs</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden sm:block font-label-md text-label-md px-4 py-2 text-on-surface-variant hover:bg-surface-container-low transition-all">Log In</button>
+<a href="#pricing" class="bg-secondary text-on-secondary px-6 py-2.5 rounded-lg font-label-md text-label-md font-bold shadow-sm hover:opacity-90 active:scale-95 transition-all inline-block">Get Started</a>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="py-section-gap-lg bg-surface-container-lowest overflow-hidden">
+<div class="max-w-[1200px] mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="space-y-8">
+<h1 class="font-display text-display text-primary leading-tight">
+                        CV help, without the guesswork.
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                        Get a clearer, stronger CV with human-supported review and rewriting, powered by Job Alchemist. We bridge the gap between your raw experience and professional presentation.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="inline-flex justify-center items-center bg-secondary text-on-secondary px-8 py-4 rounded-xl font-label-md text-label-md font-bold shadow-md hover:bg-opacity-90 transition-all" href="#pricing">
+                            View CV Packages
+                        </a>
+<a class="inline-flex justify-center items-center border-2 border-border-subtle text-primary px-8 py-4 rounded-xl font-label-md text-label-md font-bold hover:bg-surface-container-low transition-all" href="#how-it-works">
+                            See How It Works
+                        </a>
+</div>
+<div class="flex items-center gap-2 py-4 border-t border-border-subtle">
+<span class="material-symbols-outlined text-success-green" data-icon="verified" style="font-variation-settings: &quot;FILL&quot; 1;">verified</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">
+                            Fixed-price. Human-reviewed. NZ-based. No calls required.
+                        </p>
+</div>
+</div>
+<div class="relative">
+<img alt="CV Review Visual" class="w-full h-auto rounded-3xl shadow-2xl" src="assets/ChatGPT Image Jun 2, 2026, 02_10_58 PM.png">
+</div>
+</div>
+</section>
+<!-- Problem Section -->
+<section class="py-section-gap-lg bg-surface-container-low">
+<div class="max-w-[1200px] mx-auto px-gutter text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary">Your experience might be stronger than your CV makes it look.</h2><p class="mt-6 font-body-lg text-body-lg text-on-surface-variant max-w-3xl mx-auto">Writing about yourself is harder than it sounds. It’s easy to undersell what you’ve done, over-explain the wrong things, or end up with a CV that reads like a list of duties, even when your experience is genuinely strong.</p>
+</div>
+<div class="max-w-[1200px] mx-auto px-gutter grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="bg-surface-container-lowest p-8 rounded-xl border border-border-subtle shadow-sm hover:shadow-md transition-shadow"><div class="w-12 h-12 bg-accent-blue-light rounded-full flex items-center justify-center mb-6"><span class="material-symbols-outlined text-secondary">account_tree</span></div><h3 class="font-headline-md text-headline-md text-primary mb-4 text-on-surface">Is the structure unclear?</h3><p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">If your CV isn’t getting responses, it can be hard to know what to fix.</p></div>
+<div class="bg-surface-container-lowest p-8 rounded-xl border border-border-subtle shadow-sm hover:shadow-md transition-shadow"><div class="w-12 h-12 bg-accent-blue-light rounded-full flex items-center justify-center mb-6"><span class="material-symbols-outlined text-secondary">visibility_off</span></div><h3 class="font-headline-md text-headline-md text-primary mb-4 text-on-surface">Is your strongest experience buried?</h3><p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Often, your most impactful achievements are hidden behind a long list of duties.</p></div>
+<div class="bg-surface-container-lowest p-8 rounded-xl border border-border-subtle shadow-sm hover:shadow-md transition-shadow"><div class="w-12 h-12 bg-accent-blue-light rounded-full flex items-center justify-center mb-6"><span class="material-symbols-outlined text-secondary">target</span></div><h3 class="font-headline-md text-headline-md text-primary mb-4 text-on-surface">Is it too generic for your target roles?</h3><p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Generic applications struggle to cut through the initial screening process.</p></div>
+</div><div class="max-w-[1200px] mx-auto px-gutter text-center mt-16"><p class="font-body-lg text-body-lg text-primary font-semibold max-w-3xl mx-auto">That’s where Job Alchemist Assisted comes in. We help you step back, make sense of your experience, and turn it into a CV or application that feels clearer, stronger, and easier for employers to understand.</p></div>
+</section>
+<!-- What is it Section -->
+<section class="py-section-gap-lg bg-surface-container-lowest">
+<div class="max-w-[1200px] mx-auto px-gutter">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary">Human-supported CV help, powered by Job Alchemist.</h2><p class="mt-6 font-body-lg text-body-lg text-on-surface-variant max-w-3xl mx-auto text-center">Job Alchemist was built to help people create stronger job applications. Job Alchemist Assisted adds a human layer for people who want more hands-on help with their CV or a specific application.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 bg-primary-container text-on-primary-container p-12 rounded-3xl">
+<div class="space-y-6 flex flex-col">
+<h3 class="font-headline-md text-headline-md text-on-primary-container">Job Alchemist Structure</h3>
+<p class="font-body-md text-body-md text-on-primary-container opacity-90">We use the proprietary Job Alchemist framework to ensure every CV has a logical, ATS Friendly flow. It's about data-driven clarity and strategic hierarchy.</p>
+<ul class="space-y-4 mt-auto">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-success-green mt-1" data-icon="check_circle" style="font-variation-settings: &quot;FILL&quot; 1;">check_circle</span>
+<span class="font-body-md">Proven information hierarchy</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-success-green mt-1" data-icon="check_circle" style="font-variation-settings: &quot;FILL&quot; 1;">check_circle</span>
+<span class="font-body-md">ATS optimised layouts</span>
+</li>
+</ul>
+</div>
+<div class="space-y-6 md:border-l md:border-on-primary-container/20 md:pl-12 flex flex-col">
+<h3 class="font-headline-md text-headline-md text-on-primary-container">Human Review &amp; Editing</h3>
+<p class="font-body-md text-body-md text-on-primary-container opacity-90">We use Job Alchemist to analyse your experience, identify gaps, and structure
+recommendations. Then our team carefully reviews, edits, and shapes the output so it's clear,
+accurate, and actually useful.&nbsp;</p>
+<ul class="space-y-4 mt-auto">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-success-green mt-1" data-icon="check_circle" style="font-variation-settings: &quot;FILL&quot; 1;">check_circle</span>
+<span class="font-body-md">Clearer Documents</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-success-green mt-1" data-icon="check_circle" style="font-variation-settings: &quot;FILL&quot; 1;">check_circle</span>
+<span class="font-body-md">Genuine Insight</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing Section -->
+<section class="py-section-gap-lg bg-surface-container-low" id="pricing">
+<div class="max-w-[1200px] mx-auto px-gutter">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary">Choose the level of CV help you need.</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Basic -->
+<div class="bg-surface-container-lowest p-8 rounded-2xl border border-border-subtle flex flex-col">
+<div class="mb-8">
+<h3 class="font-headline-md text-headline-md text-primary text-on-surface">CV Review</h3>
+<p class="text-secondary font-bold text-3xl mt-2">$99</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">For people who want clear feedback before rewriting their CV</p>
+</div>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-success-green" data-icon="check">check</span><span class="font-body-md">Full audit of current CV</span></li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-success-green" data-icon="check">check</span><span class="font-body-md">Actionable written feedback</span></li>
+
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-success-green" data-icon="check">check</span><span class="font-body-md">Priority fixes</span></li><li class="flex items-center gap-2"><span class="material-symbols-outlined text-success-green" data-icon="check">check</span><span class="font-body-md">Structure recommendations</span></li></ul>
+            <button type="button" class="w-full py-4 rounded-xl border-2 border-secondary text-secondary font-bold hover:bg-secondary hover:text-white transition-all js-redirect-button" data-url="https://buy.stripe.com/00w00lc2Vg474r8fvw3sI00" data-target="">Get a CV Review</button>
+</div>
+<!-- Recommended -->
+<div class="bg-surface-container-lowest p-8 rounded-2xl border-2 border-secondary flex flex-col relative transform md:-translate-y-4 shadow-xl">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-secondary text-on-secondary px-4 py-1 rounded-full font-label-sm text-label-sm uppercase tracking-widest">Most Popular</div>
+<div class="mb-8">
+<h3 class="font-headline-md text-headline-md text-primary text-on-surface">CV Rewrite</h3>
+<p class="text-secondary font-bold text-3xl mt-2">$349</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">For people who want their CV rewritten and improved.
+</p>
+</div>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-success-green" data-icon="check">check</span><span class="font-body-md">CV Rewrite included</span></li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-success-green" data-icon="check">check</span><span class="font-body-md">Stronger work history wording</span></li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-success-green" data-icon="check">check</span><span class="font-body-md">ATS optimised formatting</span></li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-success-green" data-icon="check">check</span><span class="font-body-md">1 round of revisions</span></li>
+</ul>
+<button type="button" class="w-full py-4 rounded-xl bg-secondary text-on-secondary font-bold hover:opacity-90 transition-all js-redirect-button" data-url="https://buy.stripe.com/fZubJ37MFdVZe1I5UW3sI01" data-target="">Book a CV Rewrite</button>
+</div>
+<!-- Premium -->
+<div class="bg-surface-container-lowest p-8 rounded-2xl border border-border-subtle flex flex-col">
+<div class="mb-8">
+<h3 class="font-headline-md text-headline-md text-primary text-on-surface">Targeted Application</h3>
+<p class="text-secondary font-bold text-3xl mt-2">$499</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">For people applying for a specific role.
+</p>
+</div>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-success-green" data-icon="check">check</span><span class="font-body-md">CV Targeted to a specific role</span></li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-success-green" data-icon="check">check</span><span class="font-body-md">Custom Cover Letter</span></li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-success-green" data-icon="check">check</span><span class="font-body-md">Job fit analysis</span></li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-success-green" data-icon="check">check</span><span class="font-body-md">Interview talking points</span></li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-success-green" data-icon="check">check</span><span class="font-body-md">1 round of revisions</span></li></ul>
+<button type="button" class="w-full py-4 rounded-xl border-2 border-secondary text-secondary font-bold hover:bg-secondary hover:text-white transition-all js-redirect-button" data-url="https://buy.stripe.com/28EfZjgjb2dh5vc8343sI02" data-target="">Start My Application Pack</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Add-ons Section -->
+<section class="py-section-gap-lg bg-surface-container-lowest" id="add-ons">
+<div class="max-w-[800px] mx-auto px-gutter">
+<h2 class="font-headline-lg text-headline-lg text-primary text-center mb-12">Optional add-ons</h2><p class="mt-6 font-body-lg text-body-lg text-on-surface-variant max-w-3xl mx-auto text-center">Need something extra? You can add these to your package if you want more support, faster
+turnaround, or help with a specific part of your job search.
+</p><div><br></div><p class=""></p>
+<div class="bg-white rounded-2xl border border-border-subtle overflow-hidden">
+<div class="grid grid-cols-2 p-6 border-b border-border-subtle bg-surface-container-low font-bold text-primary">
+<div class="">Service</div>
+<div class="text-right">Price</div>
+</div>
+<div class="grid grid-cols-2 p-6 border-b border-border-subtle hover:bg-surface-container-lowest transition-colours">
+<div class="font-body-md">30-Min Strategy Call</div>
+<div class="text-right font-bold text-secondary">+$99</div>
+</div>
+<div class="grid grid-cols-2 p-6 border-b border-border-subtle hover:bg-surface-container-lowest transition-colours">
+<div class="font-body-md">Additional Revision Loop</div>
+<div class="text-right font-bold text-secondary">+$75</div>
+</div>
+<div class="grid grid-cols-2 p-6 border-b border-border-subtle hover:bg-surface-container-lowest transition-colours">
+<div class="font-body-md">LinkedIn Profile Content</div>
+<div class="text-right font-bold text-secondary">+$199</div>
+</div><div class="grid grid-cols-2 p-6 border-t border-border-subtle hover:bg-surface-container-lowest transition-colours border-b"><div class="font-body-md">Cover Letter Only</div><div class="text-right font-bold text-secondary">+$99</div></div>
+<div class="grid grid-cols-2 p-6 hover:bg-surface-container-lowest transition-colours">
+<div class="font-body-md">Express 48hr Turnaround</div>
+<div class="text-right font-bold text-secondary">+$149</div>
+</div>
+</div>
+</div>
+</section>
+<!-- How It Works Section -->
+<section class="py-section-gap-lg bg-primary text-on-primary" id="how-it-works">
+<div class="max-w-[1200px] mx-auto px-gutter">
+<h2 class="font-headline-lg text-headline-lg text-center mb-16">Simple, fixed-price support from start to finish.</h2>
+<div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+<div class="space-y-4">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center font-bold text-white text-xl">1</div>
+<h4 class="font-headline-md text-headline-md text-white">Pick package</h4>
+<p class="font-body-md opacity-80">Choose a CV Review, CV Rewrite, or Targeted Application Pack.</p>
+</div>
+<div class="space-y-4">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center font-bold text-white text-xl">2</div>
+<h4 class="font-headline-md text-headline-md text-white">Send details</h4>
+<p class="font-body-md">After payment, you’ll complete a structured intake form and upload your current CV. This gives us the context we need to give you useful, accurate support.</p>
+</div>
+<div class="space-y-4">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center font-bold text-white text-xl">3</div>
+<h4 class="font-headline-md text-headline-md text-white">Review/rewrite</h4>
+<p class="font-body-md opacity-80">Our experts work their magic applying the Job Alchemist framework.</p>
+</div>
+<div class="space-y-4">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center font-bold text-white text-xl">4</div>
+<h4 class="font-headline-md text-headline-md text-white">Get docs</h4>
+<p class="font-body-md opacity-80">Your completed documents are delivered within 7 business days after your intake form is
+complete.&nbsp;</p>
+</div>
+<div class="space-y-4">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center font-bold text-white text-xl">5</div>
+<h4 class="font-headline-md text-headline-md text-white">Revision</h4>
+<p class="font-body-md opacity-80">Request a round of final adjustments if needed to perfect it.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Who We Help Section -->
+<section class="py-section-gap-lg bg-surface-container-low">
+<div class="max-w-[1200px] mx-auto px-gutter">
+<h2 class="font-headline-lg text-headline-lg text-primary text-center mb-16">Who we help get results</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+<div class="bg-white p-6 rounded-xl border border-border-subtle shadow-sm flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-secondary mb-4" data-icon="search" style="font-size: 40px;">search</span>
+<h5 class="font-headline-md text-headline-md text-primary text-lg">Active job seekers</h5>
+</div>
+<div class="bg-white p-6 rounded-xl border border-border-subtle shadow-sm flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-secondary mb-4" data-icon="swap_horiz" style="font-size: 40px;">swap_horiz</span>
+<h5 class="font-headline-md text-headline-md text-primary text-lg">Career changers</h5>
+</div>
+<div class="bg-white p-6 rounded-xl border border-border-subtle shadow-sm flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-secondary mb-4" data-icon="home" style="font-size: 40px;">home</span>
+<h5 class="font-headline-md text-headline-md text-primary text-lg">Return-to-work</h5>
+</div>
+<div class="bg-white p-6 rounded-xl border border-border-subtle shadow-sm flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-secondary mb-4" data-icon="event_busy" style="font-size: 40px;">event_busy</span>
+<h5 class="font-headline-md text-headline-md text-primary text-lg">Recently redundant</h5>
+</div>
+<div class="bg-white p-6 rounded-xl border border-border-subtle shadow-sm flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-secondary mb-4" data-icon="target" style="font-size: 40px;">target</span>
+<h5 class="font-headline-md text-headline-md text-primary text-lg">Specific-role applicants</h5>
+</div>
+</div>
+</div>
+</section>
+<!-- Fit / Reassurance Section -->
+<section class="py-section-gap-lg bg-surface-container-lowest">
+<div class="max-w-[1000px] mx-auto px-gutter bg-accent-blue-light/30 rounded-3xl p-12 border border-accent-blue-light">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div>
+<h3 class="font-headline-lg text-headline-lg text-primary mb-6">What this service IS</h3>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-success-green" data-icon="check_circle">check_circle</span>
+<span class="font-body-md text-on-surface">Professional CV editing for clarity and impact.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-success-green" data-icon="check_circle">check_circle</span>
+<span class="font-body-md text-on-surface">Modern, structured layout for readability.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-success-green" data-icon="check_circle">check_circle</span>
+<span class="font-body-md text-on-surface">Strategic content positioning for target roles.</span>
+</li>
+</ul>
+</div>
+<div>
+<h3 class="font-headline-lg text-headline-lg text-primary mb-6">What it ISN'T</h3>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-error" data-icon="cancel">cancel</span>
+<span class="font-body-md text-on-surface">We don't interview you (we work from your notes).</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-error" data-icon="cancel">cancel</span>
+<span class="font-body-md text-on-surface">We don't make up experience or fluff skills.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-error" data-icon="cancel">cancel</span>
+<span class="font-body-md text-on-surface">We don't guarantee specific job offers.</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-section-gap-lg bg-surface-container-low" id="faqs">
+<div class="max-w-[800px] mx-auto px-gutter">
+<h2 class="font-headline-lg text-headline-lg text-primary text-center mb-12">Frequently Asked Questions</h2>
+<div class="space-y-4" id="faq-container">
+<!-- FAQs will be injected here via JS for cleaner HTML -->
+<div class="accordion-item bg-white border border-border-subtle rounded-xl overflow-hidden">
+<button class="w-full p-6 flex justify-between items-center text-left hover:bg-surface-container-low transition-colours" onclick="toggleFaq(0)">
+<span class="font-headline-md text-primary text-lg">Do you guarantee I’ll get interviews or job offers?</span>
+<span class="material-symbols-outlined icon-rotate transition-transform" data-icon="expand_more">expand_more</span>
+</button>
+<div class="accordion-content bg-surface-container-lowest">
+<div class="p-6 pt-0 font-body-md text-on-surface-variant leading-relaxed">
+                        No. We can’t guarantee interviews, job offers, or employer responses. What we can do is help
+improve the clarity, structure, and targeting of your CV or application materials.
+                    </div>
+</div>
+</div><div class="accordion-item bg-white border border-border-subtle rounded-xl overflow-hidden">
+<button class="w-full p-6 flex justify-between items-center text-left hover:bg-surface-container-low transition-colours" onclick="toggleFaq(1)">
+<span class="font-headline-md text-primary text-lg">Is it really a human writing it?</span>
+<span class="material-symbols-outlined icon-rotate transition-transform" data-icon="expand_more">expand_more</span>
+</button>
+<div class="accordion-content bg-surface-container-lowest">
+<div class="p-6 pt-0 font-body-md text-on-surface-variant leading-relaxed">
+                        Yes. While we use frameworks for structure, every word is reviewed and edited by an experienced NZ-based career document specialist.
+                    </div>
+</div>
+</div><div class="accordion-item bg-white border border-border-subtle rounded-xl overflow-hidden">
+<button class="w-full p-6 flex justify-between items-center text-left hover:bg-surface-container-low transition-colours" onclick="toggleFaq(2)">
+<span class="font-headline-md text-primary text-lg">Do I need to have a job ad ready?
+</span>
+<span class="material-symbols-outlined icon-rotate transition-transform" data-icon="expand_more">expand_more</span>
+</button>
+<div class="accordion-content bg-surface-container-lowest">
+<div class="p-6 pt-0 font-body-md text-on-surface-variant leading-relaxed">
+                        Only if you choose the Targeted Application Pack. For a CV Review or CV Rewrite, you can tell
+us the types of roles you’re aiming for instead.
+
+                    </div>
+</div>
+</div><div class="accordion-item bg-white border border-border-subtle rounded-xl overflow-hidden">
+<button class="w-full p-6 flex justify-between items-center text-left hover:bg-surface-container-low transition-colours" onclick="toggleFaq(3)">
+<span class="font-headline-md text-primary text-lg">Are calls included?</span>
+<span class="material-symbols-outlined icon-rotate transition-transform" data-icon="expand_more">expand_more</span>
+</button>
+<div class="accordion-content bg-surface-container-lowest">
+<div class="p-6 pt-0 font-body-md text-on-surface-variant leading-relaxed">
+                        No. Our standard packages are async to keep the process simple and fixed-price. If you’d like a
+call, you can add a 30-minute call separately.
+
+                    </div>
+</div>
+</div><div class="accordion-item bg-white border border-border-subtle rounded-xl overflow-hidden">
+<button class="w-full p-6 flex justify-between items-center text-left hover:bg-surface-container-low transition-colours" onclick="toggleFaq(4)">
+<span class="font-headline-md text-primary text-lg">What if I'm not happy with the first draft?</span>
+<span class="material-symbols-outlined icon-rotate transition-transform" data-icon="expand_more">expand_more</span>
+</button>
+<div class="accordion-content bg-surface-container-lowest">
+<div class="p-6 pt-0 font-body-md text-on-surface-variant leading-relaxed">
+                        Our rewrite packages include one full round of revisions to ensure you're completely satisfied with the final result. However,&nbsp;It does not include
+changing the target role, adding large amounts of new information, creating a new CV version,
+or starting again from scratch.
+</div>
+</div>
+</div><div class="accordion-item bg-white border border-border-subtle rounded-xl overflow-hidden">
+<button class="w-full p-6 flex justify-between items-center text-left hover:bg-surface-container-low transition-colours" onclick="toggleFaq(5)">
+<span class="font-headline-md text-primary text-lg">Can you help with career changes?</span>
+<span class="material-symbols-outlined icon-rotate transition-transform" data-icon="expand_more">expand_more</span>
+</button>
+<div class="accordion-content bg-surface-container-lowest">
+<div class="p-6 pt-0 font-body-md text-on-surface-variant leading-relaxed">
+                        Yes. A CV rewrite can help reposition your existing experience toward a new role or industry. If
+you’re applying for a specific role, the Targeted Application Pack may be the better fit.
+                    </div>
+</div>
+</div><div class="accordion-item bg-white border border-border-subtle rounded-xl overflow-hidden">
+<button class="w-full p-6 flex justify-between items-center text-left hover:bg-surface-container-low transition-colours" onclick="toggleFaq(6)">
+<span class="font-headline-md text-primary text-lg">How long does it take?</span>
+<span class="material-symbols-outlined icon-rotate transition-transform" data-icon="expand_more">expand_more</span>
+</button>
+<div class="accordion-content bg-surface-container-lowest">
+<div class="p-6 pt-0 font-body-md text-on-surface-variant leading-relaxed">
+                        Standard turnaround is 7 business days after payment, completed intake, and receipt of all
+required documents.&nbsp;</div>
+</div>
+</div><div class="accordion-item bg-white border border-border-subtle rounded-xl overflow-hidden">
+<button class="w-full p-6 flex justify-between items-center text-left hover:bg-surface-container-low transition-colours" onclick="toggleFaq(7)">
+<span class="font-headline-md text-primary text-lg">Can you help if I’ve been made redundant?
+</span>
+<span class="material-symbols-outlined icon-rotate transition-transform" data-icon="expand_more">expand_more</span>
+</button>
+<div class="accordion-content bg-surface-container-lowest">
+<div class="p-6 pt-0 font-body-md text-on-surface-variant leading-relaxed">
+                        Yes. We can help you update your CV, clarify your experience, and prepare stronger application
+materials as you start your job search.
+                    </div>
+</div>
+</div><div class="accordion-item bg-white border border-border-subtle rounded-xl overflow-hidden">
+<button class="w-full p-6 flex justify-between items-center text-left hover:bg-surface-container-low transition-colours" onclick="toggleFaq(8)">
+<span class="font-headline-md text-primary text-lg">What format will I receive my files in?</span>
+<span class="material-symbols-outlined icon-rotate transition-transform" data-icon="expand_more">expand_more</span>
+</button>
+<div class="accordion-content bg-surface-container-lowest">
+<div class="p-6 pt-0 font-body-md text-on-surface-variant leading-relaxed">
+                        You will receive editable Word documents (.docx)/google docs and formatted PDF files.
+                    </div>
+</div>
+</div><div class="accordion-item bg-white border border-border-subtle rounded-xl overflow-hidden">
+<button class="w-full p-6 flex justify-between items-center text-left hover:bg-surface-container-low transition-colours" onclick="toggleFaq(9)">
+<span class="font-headline-md text-primary text-lg">Can I get an urgent turnaround?
+</span>
+<span class="material-symbols-outlined icon-rotate transition-transform" data-icon="expand_more">expand_more</span>
+</button>
+<div class="accordion-content bg-surface-container-lowest">
+<div class="p-6 pt-0 font-body-md text-on-surface-variant leading-relaxed">
+                        Priority turnaround may be available as a paid add-on, depending on capacity. Standard delivery
+is 7 business days.
+
+                    </div>
+</div>
+</div><div class="accordion-item bg-white border border-border-subtle rounded-xl overflow-hidden">
+<button class="w-full p-6 flex justify-between items-center text-left hover:bg-surface-container-low transition-colours" onclick="toggleFaq(10)">
+<span class="font-headline-md text-primary text-lg">Do you help with LinkedIn profiles?</span>
+<span class="material-symbols-outlined icon-rotate transition-transform" data-icon="expand_more">expand_more</span>
+</button>
+<div class="accordion-content bg-surface-container-lowest">
+<div class="p-6 pt-0 font-body-md text-on-surface-variant leading-relaxed">
+                        Yes, we offer a LinkedIn Profile Content add-on which provides you with the copy needed for your About, Headline, and Experience sections.
+                    </div>
+</div>
+</div><div class="accordion-item bg-white border border-border-subtle rounded-xl overflow-hidden active">
+<button class="w-full p-6 flex justify-between items-center text-left hover:bg-surface-container-low transition-colours" onclick="toggleFaq(11)">
+<span class="font-headline-md text-primary text-lg">What's the difference between a review and a rewrite?</span>
+<span class="material-symbols-outlined icon-rotate transition-transform" data-icon="expand_more">expand_more</span>
+</button>
+<div class="accordion-content bg-surface-container-lowest">
+<div class="p-6 pt-0 font-body-md text-on-surface-variant leading-relaxed">
+                        A review provides feedback on what to change; a rewrite does the work for you, providing a finished, ready-to-use document.
+                    </div>
+</div>
+</div></div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="py-section-gap-lg bg-surface-container-lowest">
+<div class="max-w-[1200px] mx-auto px-gutter text-center space-y-8">
+<h2 class="font-headline-lg text-headline-lg text-primary max-w-2xl mx-auto">Let’s make your CV clearer, stronger, and easier to use.</h2><p class="mt-6 font-body-lg text-body-lg text-on-surface-variant max-w-3xl mx-auto text-center">Pick your package and send us your current CV. We’ll review, rewrite, or tailor your application
+materials using Job Alchemist’s structured analysis plus human editing.
+</p>
+<div class="space-y-4">
+        <button type="button" class="bg-secondary text-on-secondary px-10 py-5 rounded-xl font-display text-headline-md font-bold shadow-xl hover:opacity-90 transition-all js-redirect-button" data-url="https://buy.stripe.com/fZubJ37MFdVZe1I5UW3sI01" data-target="">
+                        Book a CV Rewrite
+                    </button>
+<p class="font-body-md text-on-surface-variant italic">
+                        Fixed-price. Paid upfront. 7 business day turnaround.
+                    </p>
+</div>
+<div class="pt-8 border-t border-border-subtle max-w-lg mx-auto">
+<p class="font-label-sm text-label-sm text-on-surface-variant">
+                        Note: Review-only services typically take 5 business days, while full rewrites may take up to 7 business days during peak periods.
+                    </p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-surface-deep text-on-primary">
+<div class="max-w-[1200px] mx-auto px-gutter py-section-gap-md grid grid-cols-1 md:grid-cols-2 gap-gutter w-full">
+<div class="space-y-6">
+<h2 class="font-display text-headline-md font-bold text-surface-container-lowest">Job Alchemist Assisted</h2>
+<p class="font-body-md text-on-primary-container max-w-sm opacity-80">Empowering professionals through expert CV refinement and career document optimisation.</p>
+<p class="font-label-sm text-label-sm text-on-primary-container">© 2026 Job Alchemist Assisted. All rights reserved. Professional Career Services.</p>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md text-secondary-fixed-dim uppercase tracking-widest font-bold">Company</h4>
+<ul class="space-y-2">
+<li class=""><a class="font-label-sm text-on-primary-container hover:text-white transition-all underline" href="https://www.jobalchemist.tech/about.html">About Us</a></li>
+<li class=""><a class="font-label-sm text-on-primary-container hover:text-white transition-all underline" href="mailto:hello@jobalchemist.tech">Contact Support</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md text-secondary-fixed-dim uppercase tracking-widest font-bold">Legal</h4>
+<ul class="space-y-2">
+<li class=""><a class="font-label-sm text-on-primary-container hover:text-white transition-all underline" href="Legal/terms.html">Terms of Service</a></li>
+<li class=""><a class="font-label-sm text-on-primary-container hover:text-white transition-all underline" href="Legal/privacy.html">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        const container = document.getElementById('faq-container');
+        faqs.forEach((faq, index) => {
+            const item = document.createElement('div');
+            item.className = 'accordion-item bg-white border border-border-subtle rounded-xl overflow-hidden';
+            item.innerHTML = `
+                <button class="w-full p-6 flex justify-between items-center text-left hover:bg-surface-container-low transition-colours" onclick="toggleFaq(${index})">
+                    <span class="font-headline-md text-primary text-lg">${faq.q}</span>
+                    <span class="material-symbols-outlined icon-rotate transition-transform" data-icon="expand_more">expand_more</span>
+                </button>
+                <div class="accordion-content bg-surface-container-lowest">
+                    <div class="p-6 pt-0 font-body-md text-on-surface-variant leading-relaxed">
+                        ${faq.a}
+                    </div>
+                </div>
+            `;
+            container.appendChild(item);
+        });
+
+        function toggleFaq(index) {
+            const items = document.querySelectorAll('.accordion-item');
+            items[index].classList.toggle('active');
+            
+            // Close others
+            items.forEach((item, i) => {
+                if(i !== index) item.classList.remove('active');
+            });
+        }
+    </script>
+    <script>
+        document.addEventListener('click', function(e){
+            const btn = e.target.closest('.js-redirect-button');
+            if(!btn) return;
+            const url = btn.getAttribute('data-url');
+            const target = btn.getAttribute('data-target');
+            if(!url || url === '#') return;
+            if(target === '_blank') window.open(url, '_blank', 'noopener');
+            else window.location.href = url;
+        });
+    </script>
+
+
+</body></html>
