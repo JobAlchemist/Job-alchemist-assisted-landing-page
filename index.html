@@ -124,6 +124,14 @@
             transform: rotate(180deg);
         }
     </style>
+<script>
+        !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="$i ji init en nn Ar tn an Yi capture calculateEventProperties dn register register_once register_for_session unregister unregister_for_session gn getFeatureFlag getFeatureFlagPayload getFeatureFlagResult isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync mn identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset setIdentity clearIdentity get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException addExceptionStep captureLog startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty fn hn createPersonProfile setInternalOrTestUser pn Ji opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing un debug Dr vn getPageViewId captureTraceFeedback captureTraceMetric Zi".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+        posthog.init('phc_poROHHbWICEfgz0AqBOLKpb3fTZqhYEPXeuxI07wHsb', {
+            api_host: 'https://us.i.posthog.com',
+            defaults: '2026-05-30',
+            person_profiles: 'always'
+        });
+    </script>
 </head>
 <body class="bg-surface font-body-md text-on-surface antialiased">
 <!-- TopNavBar -->
@@ -607,22 +615,24 @@ materials using Job Alchemist’s structured analysis plus human editing.
 </footer>
 <script>
         const container = document.getElementById('faq-container');
-        faqs.forEach((faq, index) => {
-            const item = document.createElement('div');
-            item.className = 'accordion-item bg-white border border-border-subtle rounded-xl overflow-hidden';
-            item.innerHTML = `
-                <button class="w-full p-6 flex justify-between items-center text-left hover:bg-surface-container-low transition-colours" onclick="toggleFaq(${index})">
-                    <span class="font-headline-md text-primary text-lg">${faq.q}</span>
-                    <span class="material-symbols-outlined icon-rotate transition-transform" data-icon="expand_more">expand_more</span>
-                </button>
-                <div class="accordion-content bg-surface-container-lowest">
-                    <div class="p-6 pt-0 font-body-md text-on-surface-variant leading-relaxed">
-                        ${faq.a}
+        if(Array.isArray(window.faqs)) {
+            window.faqs.forEach((faq, index) => {
+                const item = document.createElement('div');
+                item.className = 'accordion-item bg-white border border-border-subtle rounded-xl overflow-hidden';
+                item.innerHTML = `
+                    <button class="w-full p-6 flex justify-between items-center text-left hover:bg-surface-container-low transition-colours" onclick="toggleFaq(${index})">
+                        <span class="font-headline-md text-primary text-lg">${faq.q}</span>
+                        <span class="material-symbols-outlined icon-rotate transition-transform" data-icon="expand_more">expand_more</span>
+                    </button>
+                    <div class="accordion-content bg-surface-container-lowest">
+                        <div class="p-6 pt-0 font-body-md text-on-surface-variant leading-relaxed">
+                            ${faq.a}
+                        </div>
                     </div>
-                </div>
-            `;
-            container.appendChild(item);
-        });
+                `;
+                container.appendChild(item);
+            });
+        }
 
         function toggleFaq(index) {
             const items = document.querySelectorAll('.accordion-item');
@@ -641,8 +651,54 @@ materials using Job Alchemist’s structured analysis plus human editing.
             const url = btn.getAttribute('data-url');
             const target = btn.getAttribute('data-target');
             if(!url || url === '#') return;
-            if(target === '_blank') window.open(url, '_blank', 'noopener');
-            else window.location.href = url;
+            const label = btn.textContent.trim();
+            const packageName = label
+                .replace(/^Get a /, '')
+                .replace(/^Book a /, '')
+                .replace(/^Start My /, '');
+            const captureCheckoutEvents = () => {
+                if(!window.posthog || typeof posthog.capture !== 'function') return;
+                const props = {
+                    cta_text: label,
+                    package_name: packageName,
+                    destination_url: url
+                };
+                posthog.capture('stripe_checkout_started', props, { transport: 'sendBeacon' });
+                posthog.capture('pricing_cta_clicked', props, { transport: 'sendBeacon' });
+            };
+
+            if(target === '_blank') {
+                captureCheckoutEvents();
+                window.open(url, '_blank', 'noopener');
+                return;
+            }
+
+            let hasRedirected = false;
+            const redirect = () => {
+                if(hasRedirected) return;
+                hasRedirected = true;
+                window.location.href = url;
+            };
+            const captureAndRedirect = () => {
+                captureCheckoutEvents();
+                setTimeout(redirect, 100);
+            };
+
+            if(window.posthog && posthog.__loaded) {
+                captureAndRedirect();
+                return;
+            }
+
+            const startedAt = Date.now();
+            const waitForPostHog = setInterval(() => {
+                if(window.posthog && posthog.__loaded) {
+                    clearInterval(waitForPostHog);
+                    captureAndRedirect();
+                } else if(Date.now() - startedAt > 750) {
+                    clearInterval(waitForPostHog);
+                    captureAndRedirect();
+                }
+            }, 50);
         });
     </script>
 
