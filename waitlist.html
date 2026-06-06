@@ -1,0 +1,282 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en-GB" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Waitlist | JobAlchemist Assisted</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3, .font-display {
+            font-family: 'Hanken Grotesk', sans-serif;
+        }
+        .bg-mesh-gradient {
+            background-color: #f7f9fb;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(3, 22, 53, 0.03) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(0, 81, 213, 0.05) 0px, transparent 50%);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-dim": "#d8dadc",
+                        "surface-container-highest": "#e0e3e5",
+                        "secondary-container": "#316bf3",
+                        "primary": "#031635",
+                        "on-tertiary-container": "#8393ac",
+                        "surface-bright": "#f7f9fb",
+                        "on-surface-variant": "#44474e",
+                        "outline": "#75777f",
+                        "inverse-primary": "#b6c6ef",
+                        "on-surface": "#191c1e",
+                        "tertiary": "#06172a",
+                        "secondary-fixed": "#dbe1ff",
+                        "on-tertiary-fixed-variant": "#38485d",
+                        "inverse-on-surface": "#eff1f3",
+                        "error": "#ba1a1a",
+                        "background": "#f7f9fb",
+                        "surface": "#f7f9fb",
+                        "tertiary-fixed": "#d3e4fe",
+                        "on-secondary-container": "#fefcff",
+                        "primary-fixed": "#d8e2ff",
+                        "on-secondary-fixed": "#00174b",
+                        "on-error-container": "#93000a",
+                        "inverse-surface": "#2d3133",
+                        "on-secondary-fixed-variant": "#003ea8",
+                        "primary-container": "#1a2b4b",
+                        "surface-container-high": "#e6e8ea",
+                        "outline-variant": "#c5c6cf",
+                        "on-primary-fixed-variant": "#364768",
+                        "tertiary-container": "#1c2c40",
+                        "surface-tint": "#4e5e81",
+                        "secondary": "#0051d5",
+                        "on-background": "#191c1e",
+                        "secondary-fixed-dim": "#b4c5ff",
+                        "primary-fixed-dim": "#b6c6ef",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed": "#081b3a",
+                        "on-primary-container": "#8293b8",
+                        "on-secondary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "surface-variant": "#e0e3e5",
+                        "tertiary-fixed-dim": "#b7c8e1",
+                        "surface-container": "#eceef0",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#0b1c30",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f2f4f6",
+                        "border-subtle": "#E2E8F0",
+                        "surface-deep": "#0F172A"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "section-gap-lg": "96px",
+                        "section-gap-md": "64px",
+                        "container-max": "1280px",
+                        "base": "8px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px"
+                    },
+                    fontFamily: {
+                        "headline": ["Hanken Grotesk"],
+                        "display": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "body": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    fontSize: {
+                        "display": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface selection:bg-secondary/20 min-h-screen flex flex-col">
+<header class="bg-surface-container-lowest dark:bg-surface-deep border-b border-border-subtle dark:border-outline-variant sticky top-0 z-50 shadow-sm">
+<div class="flex justify-between items-center max-w-[1200px] mx-auto px-gutter py-4 w-full">
+<a class="font-display text-headline-md font-bold text-primary dark:text-primary-fixed" href="index.html">JobAlchemist Assisted</a>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="index.html#how-it-works">How It Works</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="index.html#pricing">Pricing</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="index.html#add-ons">Add-ons</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="index.html#faqs">FAQs</a>
+</nav>
+<div class="flex items-center gap-4">
+<a href="https://app.jobalchemist.tech/login" class="hidden sm:inline-flex font-label-md text-sm px-4 py-2 text-on-surface-variant hover:bg-surface-container-low transition-all">Log In</a>
+<a href="index.html#pricing" class="bg-secondary text-on-secondary px-6 py-2.5 rounded-lg font-label-md text-label-md font-bold shadow-sm hover:opacity-90 active:scale-95 transition-all inline-block">Get Started</a>
+</div>
+</div>
+</header>
+<main class="flex-grow bg-mesh-gradient">
+<!-- Hero & Waitlist Section -->
+<section class="max-w-[1200px] mx-auto px-6 py-16 md:py-24">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<!-- Left Content: Message & Form -->
+<div class="order-2 lg:order-1 max-w-xl">
+<div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant text-xs font-bold uppercase tracking-wider mb-6">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+</span>
+<span class="">High Demand Status</span>
+</div>
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-primary leading-tight mb-6">
+                        Join the waitlist for expert CV support.
+                    </h1>
+<p class="text-lg md:text-xl text-on-surface-variant leading-relaxed mb-10">
+                        We're currently at capacity to ensure every customer receives the high-touch, human-led review they deserve. Enter your email below to be notified as soon as a spot opens up.
+                    </p>
+<!-- Waitlist Form -->
+<div class="p-1 bg-white rounded-xl shadow-xl shadow-primary/5 border border-border-subtle max-w-md">
+<form class="flex flex-col sm:flex-row gap-2" id="waitlist-form">
+<input class="flex-grow px-5 py-4 rounded-lg bg-surface-container-low border-transparent focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all text-on-surface placeholder:text-on-surface-variant/60 outline-none" id="email" name="email" placeholder="Enter your email address" required="" type="email">
+<button class="bg-secondary text-on-secondary px-8 py-4 rounded-lg font-bold hover:bg-secondary/90 transition-all shadow-lg shadow-secondary/20 whitespace-nowrap active:scale-[0.98]" id="submit" type="submit">
+                                Join Waitlist
+                            </button>
+</form>
+</div>
+<!-- Success feedback (hidden by default) -->
+<div class="hidden mt-4 p-4 bg-emerald-50 text-emerald-800 rounded-lg flex items-center space-x-2 border border-emerald-100 animate-in fade-in slide-in-from-top-2" id="success-message">
+<span class="material-symbols-outlined text-emerald-600">check_circle</span>
+<span class="text-sm font-medium">Brilliant! You've been added to the priority list. We'll be in touch.</span>
+</div>
+<div aria-live="polite" class="mt-4 text-sm font-medium text-on-surface-variant" id="status"></div>
+<p class="mt-6 text-sm text-on-surface-variant/70 flex items-center space-x-2">
+<span class="material-symbols-outlined text-base">verified_user</span>
+<span class="">We value your privacy. No spam, just updates on your spot.</span>
+</p>
+</div>
+<!-- Right Content: Brand Illustration -->
+<div class="order-1 lg:order-2 flex justify-center items-center relative">
+<!-- Subtle background decoration -->
+<div class="absolute inset-0 bg-secondary/5 blur-[100px] rounded-full scale-75 pointer-events-none"></div>
+<div class="relative w-full max-w-[500px] group transition-transform duration-700 hover:scale-[1.02]">
+<img alt="Professional minimal workspace with CV and laptop" class="w-full h-auto drop-shadow-2xl rounded-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxDCOJa-KZBwCgkdeiXJiYT90NxFuEkOeUcbbHLONU-UX9ixjFUJOcTYEjlKriTWAjQze6RV8FjSaFkl8sWU8DNfiBctX5Cq1j-5G43Soq-3G7iOjHhbg44n7HhSw9V49Vt0yzHsyJn2SvEs0-1OGs3SKK9_q7aSYjTXbwdBXdLVqTaYNih3e3iGxH633JEL3u-_cxlO2Ub-jBs63z0770NVv9AzvL18GiZIZrlKPObrlfPo7j-1gGMJq0BDq6oEAPPLTcGzwAXB4">
+<!-- Floating Benefit Card -->
+
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-surface-deep text-on-primary">
+<div class="max-w-[1200px] mx-auto px-gutter py-section-gap-md grid grid-cols-1 md:grid-cols-2 gap-gutter w-full">
+<div class="space-y-6">
+<h2 class="font-display text-headline-md font-bold text-surface-container-lowest">
+                    JobAlchemist Assisted
+                </h2>
+<p class="font-body-md text-on-primary-container max-w-sm opacity-80">
+                   Empowering professionals through expert CV refinement and career document optimisation.
+                </p>
+<p class="font-label-sm text-label-sm text-on-primary-container">
+                    © 2026 JobAlchemist Assisted. All rights reserved.
+                </p>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md text-secondary-fixed-dim uppercase tracking-widest font-bold">Company</h4>
+<ul class="space-y-2">
+<li class=""><a class="font-label-sm text-on-primary-container hover:text-white transition-all underline" href="https://www.jobalchemist.tech/about.html">About Us</a></li>
+<li class=""><a class="font-label-sm text-on-primary-container hover:text-white transition-all underline" href="mailto:hello@jobalchemist.tech">Contact Support</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md text-secondary-fixed-dim uppercase tracking-widest font-bold">Legal</h4>
+<ul class="space-y-2">
+<li class=""><a class="font-label-sm text-on-primary-container hover:text-white transition-all underline" href="Legal/terms.html">Terms of Service</a></li>
+<li class=""><a class="font-label-sm text-on-primary-container hover:text-white transition-all underline" href="Legal/privacy.html">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+
+  <script>
+    // Replace this with your deployed Google Apps Script Web App URL.
+    const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbykRd9FEXdOddhUsRGneFL9bslD75K4N2lXSPxERSUq3Z1jVsrTQIUSg56tuepRkMvt/exec';
+
+    const form = document.getElementById('waitlist-form');
+    const emailInput = document.getElementById('email');
+    const submitButton = document.getElementById('submit');
+    const status = document.getElementById('status');
+    const successMessage = document.getElementById('success-message');
+    const defaultButtonText = submitButton.innerHTML;
+    let hasJoined = false;
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (hasJoined) return;
+      status.textContent = '';
+      const email = emailInput.value.trim();
+      if (!email) {
+        status.textContent = 'Please enter an email.';
+        return;
+      }
+
+      successMessage.classList.add('hidden');
+      submitButton.disabled = true;
+      submitButton.innerHTML = '<span class="material-symbols-outlined animate-spin">progress_activity</span>';
+      status.textContent = 'Submitting…';
+
+      try {
+        const res = await fetch(APPS_SCRIPT_URL, {
+          method: 'POST',
+          body: new URLSearchParams({ email }),
+        });
+
+        if (!res.ok) throw new Error('Request failed');
+        const data = await res.json();
+        if (data.status !== 'success') {
+          throw new Error(data.message || 'Unexpected response');
+          status.textContent = 'Thanks — you’re on the waitlist!';
+        }
+
+        form.reset();
+        successMessage.classList.remove('hidden');
+        status.textContent = '';
+        hasJoined = true;
+        submitButton.disabled = false;
+        submitButton.innerHTML = 'Joined!';
+        submitButton.classList.add('bg-secondary', 'hover:bg-secondary/90');
+      } catch(err) {
+        status.textContent = 'Unable to submit — try again later.';
+        submitButton.disabled = false;
+        submitButton.innerHTML = defaultButtonText;
+      }
+    });
+  </script>
+</body>
+</html>
